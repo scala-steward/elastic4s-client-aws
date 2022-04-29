@@ -1,6 +1,6 @@
 import sbt.Keys._
 
-val awsSdkVersion = "2.17.171"
+val awsSdkVersion = "2.17.180"
 val elastic4sVersion = "8.1.0"
 
 lazy val buildSettings = Seq(
@@ -58,7 +58,7 @@ lazy val elastic4sClientAWS = project.in(file(".")).
       "software.amazon.awssdk" % "auth" % awsSdkVersion,
       "software.amazon.awssdk" % "core" % awsSdkVersion,
       "software.amazon.awssdk" % "regions" % awsSdkVersion,
-      "org.scalatest" %% "scalatest" % "3.2.11" % Test
+      "org.scalatest" %% "scalatest" % "3.2.12" % Test
     )
   )
 
