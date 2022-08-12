@@ -1,12 +1,12 @@
 import sbt.Keys._
 
-val awsSdkVersion = "2.17.229"
+val awsSdkVersion = "2.17.249"
 val elastic4sVersion = "8.2.1"
 
 lazy val buildSettings = Seq(
   organization := "io.kontainers",
   scalaVersion := "2.13.8",
-  crossScalaVersions := Seq("2.12.15", scalaVersion.value)
+  crossScalaVersions := Seq("2.12.16", scalaVersion.value)
 )
 
 lazy val publishSettings = Seq(
@@ -58,12 +58,12 @@ lazy val elastic4sClientAWS = project.in(file(".")).
       "software.amazon.awssdk" % "auth" % awsSdkVersion,
       "software.amazon.awssdk" % "core" % awsSdkVersion,
       "software.amazon.awssdk" % "regions" % awsSdkVersion,
-      "org.scalatest" %% "scalatest" % "3.2.12" % Test
+      "org.scalatest" %% "scalatest" % "3.2.13" % Test
     )
   )
 
 ThisBuild / scalaVersion := "2.13.8"
-ThisBuild / crossScalaVersions := Seq("2.12.15", "2.13.8")
+ThisBuild / crossScalaVersions := Seq("2.12.16", "2.13.8")
 ThisBuild / githubWorkflowJavaVersions := Seq(JavaSpec.temurin("11.0.13"))
 ThisBuild / githubWorkflowTargetTags ++= Seq("v*")
 ThisBuild / githubWorkflowPublishTargetBranches:= Seq()
